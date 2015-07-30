@@ -1,0 +1,25 @@
+<apex:page contentType="text/xml" showHeader="false" sidebar="false" cache="false">
+
+	<!-- XML to request for payment redirect URL -->
+	<apex:outputText rendered="{!$CurrentPage.parameters.generateRequest == '1'}">
+	    <GenerateRequest>
+	        <PxPayUserId>{!$Setup.PX_Authentication__c.PxPayUserId__c}</PxPayUserId>
+	        <PxPayKey>{!$Setup.PX_Authentication__c.PxPayKey__c}</PxPayKey>
+	        <TxnType>Purchase</TxnType>
+	        <AmountInput>{!$Setup.PX_Authentication__c.Payment_Amount__c}</AmountInput>
+	        <CurrencyInput>NZD</CurrencyInput>
+	        <UrlSuccess>{!$CurrentPage.parameters.successUrl}</UrlSuccess>
+	        <UrlFail>{!$CurrentPage.parameters.successUrl}</UrlFail>
+	    </GenerateRequest>
+	</apex:outputText>
+
+	<!-- XML to process payment response. Requests the success/failure message of a payment -->
+	<apex:outputText rendered="{!$CurrentPage.parameters.processResponse == '1'}">
+    	<ProcessResponse>
+			<PxPayUserId>{!$Setup.PX_Authentication__c.PxPayUserId__c}</PxPayUserId>
+	        <PxPayKey>{!$Setup.PX_Authentication__c.PxPayKey__c}</PxPayKey>
+			<Response>{!$CurrentPage.parameters.result}</Response>
+		</ProcessResponse>
+	</apex:outputText>
+	
+</apex:page>

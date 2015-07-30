@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ApexPage xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>31.0</apiVersion>
+    <availableInTouch>false</availableInTouch>
+    <confirmationTokenRequired>false</confirmationTokenRequired>
+    <description>Response page for when a Payment Express payment has been made. Handles any success and error messages, and updates records as appropriate. Redirects user back to portal when finished.</description>
+    <label>PxPaymentResponse</label>
+</ApexPage>

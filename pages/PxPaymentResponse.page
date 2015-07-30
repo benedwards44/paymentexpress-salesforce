@@ -1,0 +1,20 @@
+<apex:page controller="PxPaymentResponseController" showheader="false" title="PX Payment Response" action="{!processResponseAndRedirect}">
+
+	<apex:stylesheet value="{!URLFOR($Resource.syndexcorp, '/css/bootstrap.min.css')}"/>
+
+	<div class="container-fluid">
+
+		<div class="row" style="padding-top:100px;">
+
+			<div class="col-md-12 text-center">
+			
+				<apex:image value="/img/loading.gif" />
+				<h4>Processing payment response...</h4>
+
+			</div>
+
+		</div>
+
+	</div>
+
+</apex:page>
