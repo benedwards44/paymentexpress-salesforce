@@ -10,6 +10,18 @@
 	</types>
 	<types>
 		<members>*</members>
+		<name>CustomObject</name>
+	</types>
+	<types>
+		<members>*</members>
+		<name>CustomObject</name>
+	</types>
+	<types>
+        <members>*</members>
+        <name>RemoteSiteSetting</name>
+    </types>
+	<types>
+		<members>*</members>
 		<name>StaticResource</name>
 	</types>
 	<version>32.0</version>
